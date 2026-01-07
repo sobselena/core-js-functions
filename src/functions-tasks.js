@@ -75,7 +75,7 @@ function getArgumentsCount(funcs) {
  *
  */
 function getPowerFunction(exponent) {
-  return function (value) {
+  return function funcName(value) {
     return value ** exponent;
   };
 }
@@ -94,7 +94,7 @@ function getPowerFunction(exponent) {
  *   getPolynom()      => null
  */
 function getPolynom(...coefficients) {
-  return function (x) {
+  return function funcName(x) {
     return coefficients.reduceRight((y, coefficient, index) => {
       let value = y;
       value += x ** (coefficients.length - index - 1) * coefficient;
