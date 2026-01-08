@@ -120,7 +120,7 @@ function getPolynom(...coefficients) {
 function memoize(func) {
   const cache = {};
   const strFunc = func.toString();
-  return function (...args) {
+  return function memoizeFunc(...args) {
     if (!cache[strFunc]) {
       cache[strFunc] = func(...args);
     }
